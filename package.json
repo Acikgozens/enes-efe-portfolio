@@ -1,26 +1,37 @@
 {
-  "name": "portfolio",
-  "version": "0.1.0",
+  "name": "enes-portfolio-dev",
+  "version": "1.0.0",
+  "description": "Enes Efe Açıkgöz - Personal Portfolio & Terminal Hub",
+  "author": "Enes Efe Açıkgöz",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "cross-env NODE_ENV=development next dev",
+    "build": "cross-env NODE_ENV=production next build",
+    "start": "cross-env NODE_ENV=production next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "clsx": "^2.1.1",
+    "cross-env": "^10.1.0",
+    "dompurify": "^3.3.2",
+    "framer-motion": "^12.35.0",
+    "lucide-react": "^0.577.0",
+    "next": "14.2.35",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.35"
+    "react-icons": "^5.6.0",
+    "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/dompurify": "^3.0.5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.35",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.35"
+    "typescript": "^5"
   }
 }

@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Enes Efe Açıkgöz | Personal Portfolio
 
-## Getting Started
+> **2nd Year Management Information Systems student focused on Backend Systems, AI Agents, and FinTech Architectures.**
 
-First, run the development server:
+Welcome to the source code for my interactive portfolio. This digital space serves as both a resume and a demonstration of my technical capabilities.
+
+---
+
+## 🌌 The Concept
+
+This project is built around a **Retro Terminal & Orbital Theme**. 
+
+It draws inspiration from classic CLI environments mixed with modern space-age aesthetics. The core experience centers around the `system_profile.sh` output—a simulated command-line interface—and plays on the paradoxical theme: *"I know you know that I know you know... and the AI knows it better."*
+
+## 💻 Tech Stack
+
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer&logoColor=blue)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+## ✨ Key Features
+
+- **Terminal Simulation**: An interactive typewriter effect executing `system_profile.sh` with simulated system-like outputs, rendering my background data.
+- **Orbital Tech Canvas**: Smooth, dynamic CSS/Framer Motion animations visualizing my core technology skills orbiting a central core.
+- **Performance Optimized**: Built with rapid Server-Side Rendering (SSR), rigorous hydration guards, passive scroll listeners, and GPU-accelerated micro-animations for zero-lag performance.
+
+## 🚀 Installation & Local Development
+
+To run this project locally, execute the following standard Next.js commands:
 
 ```bash
+# 1. Install dependencies
+npm install
+
+# 2. Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🖥️ Environment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project was developed on a **Huawei Matebook 13** and rigorously tested across cross-platform environments, including both **Windows** and **Fedora Linux** dual-boot setups to ensure maximum compatibility and performance.
 
-## Learn More
+## 📜 License
 
-To learn more about Next.js, take a look at the following resources:
+**Copyright (c) 2026 Enes Efe Açıkgöz. All Rights Reserved.**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This repository and its source code are strictly proprietary. No part of this software, project, or its associated code and assets may be reproduced, distributed, copied, or transmitted in any form or by any means without the prior written permission of the copyright owner.
