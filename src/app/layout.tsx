@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Press_Start_2P, Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import BackToTop from "@/components/BackToTop";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const pressStart2P = Press_Start_2P({
@@ -57,6 +59,8 @@ export default function RootLayout({
           {children}
         </div>
         <BackToTop />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
