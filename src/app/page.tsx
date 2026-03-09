@@ -6,6 +6,7 @@ import PlayerCard from "@/components/PlayerCard";
 import TerminalAbout from "@/components/TerminalAbout";
 import ContactForm from "@/components/ContactForm";
 import ProjectSection from "@/components/ProjectSection";
+import HeroTypewriter from "@/components/HeroTypewriter";
 
 export default function Home() {
   const aboutText = `USER: Enes Efe Açıkgöz
@@ -32,9 +33,9 @@ CURRENT_FOCUS: AI Agents, Games, and Data Science`;
 
           {/* Left Side: Hero Text and CTA */}
           <div className="flex w-full lg:w-1/2 flex-col items-start gap-6 relative z-10">
-            <p className="font-pressStart text-[10px] md:text-xs lg:text-sm text-gray-400 leading-snug w-full max-w-[500px] uppercase">
-              I know you know that I know you know, and I know that the AI knows it better than you know that I know. It&apos;s prompts all the way down.
-            </p>
+            <div className="w-full flex justify-center lg:justify-start">
+              <HeroTypewriter text="Researching the tech, dreaming of the world. Seeking the truth beyond the code and across the horizons." />
+            </div>
 
             {/* Fluid Typography Header */}
             <h1 className="font-pressStart flex flex-col items-start 

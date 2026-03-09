@@ -34,8 +34,8 @@ export default function ProjectSection() {
 
                 {/* Retro Section Header */}
                 <div className="mb-16 md:mb-24 text-center">
-                    <h2 className="font-pressStart text-xl md:text-3xl lg:text-4xl text-white uppercase tracking-tighter mb-4">
-                        SELECT <span className="text-accent underline decoration-4 underline-offset-8">YOUR</span> MISSION
+                    <h2 className="font-pressStart text-3xl md:text-5xl leading-loose md:leading-snug text-white uppercase tracking-tighter mb-4">
+                        SELECT <span className="text-accent">YOUR</span> MISSION
                     </h2>
                     <div className="w-full flex justify-center gap-2 mt-6">
                         <div className="w-12 h-1 bg-accent"></div>
