@@ -29,12 +29,12 @@ const projects = [
 
 export default function ProjectSection() {
     return (
-        <section id="projects" className="w-full px-4 md:px-12 py-12 md:py-24 bg-[#050505]/50 border-y border-[#1a1a1a]">
+        <section id="projects" className="w-full px-4 md:px-12 py-12 md:py-24 bg-transparent">
             <div className="mx-auto max-w-6xl w-full flex flex-col items-center">
 
                 {/* Retro Section Header */}
                 <div className="mb-16 md:mb-24 text-center">
-                    <h2 className="font-pressStart text-3xl md:text-5xl leading-loose md:leading-snug text-white uppercase tracking-tighter mb-4">
+                    <h2 className="font-pressStart text-3xl md:text-5xl leading-loose md:leading-snug text-black dark:text-white uppercase tracking-tighter mb-4">
                         SELECT <span className="text-accent">YOUR</span> MISSION
                     </h2>
                     <div className="w-full flex justify-center gap-2 mt-6">

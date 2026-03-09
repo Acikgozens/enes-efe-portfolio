@@ -15,13 +15,13 @@ interface ProjectCardProps {
 export default function ProjectCard({ title, description, tags, githubUrl, status, index = 0 }: ProjectCardProps) {
     return (
         <motion.div
-            whileHover={{ scale: 1.02, zIndex: 50 }}
+            whileHover={{ scale: 1.02, zIndex: 40 }}
             style={{ zIndex: 40 - index }}
-            className="group relative border-4 border-[#333] bg-[#0d0d0d] p-4 md:p-6 transition-all hover:border-accent hover:shadow-[0_0_20px_rgba(253,184,19,0.15)] flex flex-col h-full overflow-visible"
+            className="group relative border-4 border-gray-200 dark:border-[#333] bg-white dark:bg-transparent p-4 md:p-6 transition-all hover:border-accent hover:shadow-[0_0_20px_rgba(253,184,19,0.15)] flex flex-col h-full overflow-visible"
         >
             {/* Header with Title and Optional Status Badge */}
             <div className="flex justify-between items-start gap-4 mb-4 flex-wrap">
-                <h3 className="font-pressStart text-sm md:text-base text-white uppercase leading-tight group-hover:text-accent transition-colors flex-1">
+                <h3 className="font-pressStart text-sm md:text-base text-black dark:text-white uppercase leading-tight group-hover:text-accent transition-colors flex-1">
                     {title}
                 </h3>
                 {status && (
@@ -31,7 +31,7 @@ export default function ProjectCard({ title, description, tags, githubUrl, statu
                 )}
             </div>
 
-            <p className="font-sans text-xs md:text-sm text-gray-400 mb-6 uppercase flex-grow">
+            <p className="font-sans text-xs md:text-sm text-gray-700 dark:text-gray-400 mb-6 uppercase flex-grow">
                 {description}
             </p>
 
@@ -39,7 +39,7 @@ export default function ProjectCard({ title, description, tags, githubUrl, statu
                 {tags.map((tag) => (
                     <span
                         key={tag}
-                        className="font-pressStart text-[8px] bg-[#1a1a1a] text-gray-400 px-2 py-1 border border-[#333] hover:text-white hover:border-accent transition-colors"
+                        className="font-pressStart text-[8px] bg-gray-100 dark:bg-transparent text-gray-700 dark:text-gray-400 px-2 py-1 border border-gray-200 dark:border-[#333] hover:text-accent dark:hover:text-white hover:border-accent transition-colors"
                     >
                         {tag}
                     </span>

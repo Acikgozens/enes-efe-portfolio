@@ -1,12 +1,11 @@
 "use client";
-import { useState, useEffect } from "react";
-
+import { motion } from "framer-motion";
 import OrbitalAnimation from "@/components/OrbitalAnimation";
-import PlayerCard from "@/components/PlayerCard";
 import TerminalAbout from "@/components/TerminalAbout";
+import HeroTypewriter from "@/components/HeroTypewriter";
+import PlayerCard from "@/components/PlayerCard";
 import ContactForm from "@/components/ContactForm";
 import ProjectSection from "@/components/ProjectSection";
-import HeroTypewriter from "@/components/HeroTypewriter";
 
 export default function Home() {
   const aboutText = `USER: Enes Efe Açıkgöz
@@ -16,16 +15,14 @@ OS_ENVIRONMENT: Fedora Linux / Windows Dual-Boot
 CORE_SKILLS: Python, Sql, C#
 CURRENT_FOCUS: AI Agents, Games, and Data Science`;
 
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
-
   return (
-    <main className="flex min-h-screen w-full flex-col items-center overflow-hidden pb-24 selection:bg-accent selection:text-black">
+    <motion.div
+      key="main-content"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <main className="flex min-h-screen w-full flex-col items-center overflow-hidden pb-24 selection:bg-accent selection:text-black">
 
       {/* 1. HERO SECTION */}
       <section id="hero" className="w-full flex flex-col px-6 md:px-12 py-12 md:py-24">
@@ -40,7 +37,7 @@ CURRENT_FOCUS: AI Agents, Games, and Data Science`;
             {/* Fluid Typography Header */}
             <h1 className="font-pressStart flex flex-col items-start 
                            text-[clamp(1.5rem,6vw,4.5rem)] 
-                           leading-[1.1] text-white tracking-tight w-full uppercase">
+                           leading-[1.1] text-black dark:text-[#e5e5e5] tracking-tight w-full uppercase">
               <span>ENES</span>
               <span className="text-accent my-2">EFE</span>
               <span>AÇIKGÖZ</span>
@@ -71,9 +68,8 @@ CURRENT_FOCUS: AI Agents, Games, and Data Science`;
       <section id="about" className="w-full px-6 md:px-12 mt-12 md:mt-24">
         <div className="mx-auto flex w-full max-w-6xl flex-col lg:flex-row items-center justify-between gap-16">
 
-          {/* Left Side: Terminal About */}
           <div className="w-full lg:w-[60%] flex flex-col gap-8">
-            <h2 className="font-pressStart text-xl md:text-3xl text-white uppercase border-b-4 border-[#333] pb-4 self-start">
+            <h2 className="font-pressStart text-xl md:text-3xl text-accent dark:text-white uppercase border-b-4 border-black dark:border-[#333] pb-4 self-start">
               About Me
             </h2>
             <TerminalAbout text={aboutText} />
@@ -99,6 +95,7 @@ CURRENT_FOCUS: AI Agents, Games, and Data Science`;
       <footer className="mt-24 pb-12 font-pressStart text-[8px] text-gray-600 uppercase tracking-widest text-center">
         <p>© 2026 ENES EFE AÇIKGÖZ - [ SYSTEM STATUS: NOMINAL ]</p>
       </footer>
-    </main>
+      </main>
+    </motion.div>
   );
 }

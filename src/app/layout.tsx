@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import BackToTop from "@/components/BackToTop";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
 const pressStart2P = Press_Start_2P({
@@ -44,6 +45,9 @@ export const metadata: Metadata = {
     description: "2nd-year Management Information Systems student focusing on backend architectures and AI trading bots. I know you know that I know you know... and the AI knows it better.",
     images: ["/og-image.png"],
   },
+  other: {
+    google: "notranslate",
+  },
 };
 
 export default function RootLayout({
@@ -52,15 +56,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={`${inter.variable} ${pressStart2P.variable} font-sans antialiased bg-background text-foreground`}>
-        <Navbar />
-        <div className="pt-20">
-          {children}
-        </div>
-        <BackToTop />
-        <Analytics />
-        <SpeedInsights />
+    <html lang="en" translate="no" className="scroll-smooth" suppressHydrationWarning>
+      <body className={`${inter.variable} ${pressStart2P.variable} font-sans antialiased text-foreground bg-background`} suppressHydrationWarning>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} storageKey="theme" disableTransitionOnChange>
+          <Navbar />
+          <div className="pt-20">
+            {children}
+          </div>
+          <BackToTop />
+          <Analytics />
+          <SpeedInsights />
+        </ThemeProvider>
       </body>
     </html>
   );

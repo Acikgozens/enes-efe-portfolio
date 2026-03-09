@@ -30,10 +30,10 @@ export default function BackToTop() {
     };
 
     return (
-        <AnimatePresence>
+        <AnimatePresence initial={false}>
             {isVisible && (
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.5, y: 20 }}
+                    initial={false}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.5, y: 20 }}
                     className="fixed bottom-8 right-8 z-[100]"

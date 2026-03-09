@@ -10,10 +10,7 @@ interface TerminalAboutProps {
 export default function TerminalAbout({ text }: TerminalAboutProps) {
     const [displayedText, setDisplayedText] = useState("");
     const [index, setIndex] = useState(0);
-    const [hasMounted, setHasMounted] = useState(false);
-
     useEffect(() => {
-        setHasMounted(true);
         if (index < text.length) {
             const timeout = setTimeout(() => {
                 setDisplayedText((prev) => prev + text[index]);
@@ -23,24 +20,22 @@ export default function TerminalAbout({ text }: TerminalAboutProps) {
         }
     }, [index, text]);
 
-    if (!hasMounted) return <div className="w-full max-w-2xl border-2 border-[#333] bg-[#0a0a0a] shadow-2xl relative overflow-hidden min-h-[250px]" />;
-
     return (
-        <div className="w-full max-w-2xl border-2 border-[#333] bg-[#0a0a0a] shadow-2xl relative overflow-hidden">
+        <div className="w-full max-w-2xl border-2 border-gray-300 dark:border-[#333] bg-white dark:bg-[#0a0a0a] shadow-2xl relative overflow-hidden">
             {/* Terminal Header Bar */}
-            <div className="bg-[#1a1a1a] border-b-2 border-[#333] px-4 py-2 flex items-center justify-between">
+            <div className="bg-gray-100 dark:bg-[#1a1a1a] border-b-2 border-gray-300 dark:border-[#333] px-4 py-2 flex items-center justify-between">
                 <div className="flex gap-2">
                     <div className="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
                     <div className="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
                     <div className="w-3 h-3 rounded-full bg-[#27c93f]"></div>
                 </div>
-                <div className="font-pressStart text-[8px] text-gray-500 uppercase tracking-widest">
+                <div className="font-pressStart text-[8px] text-black dark:text-gray-500 uppercase tracking-widest">
                     system_profile.sh
                 </div>
             </div>
 
             {/* Terminal Content */}
-            <div className="p-6 font-mono text-sm md:text-base text-gray-300 leading-relaxed min-h-[200px]">
+            <div className="p-6 font-mono text-sm md:text-base text-black dark:text-gray-300 leading-relaxed min-h-[200px]">
                 <div className="flex items-start gap-2">
                     <span className="text-accent font-bold mt-1">$</span>
                     <p className="uppercase whitespace-pre-wrap">
