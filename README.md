@@ -15,9 +15,10 @@ Welcome to the source code of my interactive digital space. This project serves 
 This project is more than a static portfolio; it is a showcase of modern **AI-Assisted Development** and rigorous prompt engineering. 
 
 * **AI-Driven Architecture:** Co-developed entirely through iterative prompting and AI collaboration. From the initial layout logic to complex debugging (resolving SSR hydration mismatches and cross-platform CSS quirks), every component was systematically engineered and refined via advanced prompt strategies.
-* **Terminal Simulation:** An interactive typewriter effect executing `system_profile.sh` to dynamically render my background data. The component logic was iteratively fine-tuned to perfectly handle React mounting states without throwing hydration errors.
-* **Orbital Tech Canvas:** Smooth, dynamic Framer Motion animations visualizing my core technology skills. The layout physics, `z-index` layering, and responsive states were mathematically calculated and precisely prompted to avoid layout shifts on mobile devices.
-* **Performance Optimized:** Engineered for zero-lag performance. We utilized strict hydration guards, passive scroll listeners, and GPU-accelerated micro-animations (`will-change-transform`). The development workflow included complete environment resets to ensure seamless execution across both Windows and Fedora Linux browsers.
+* **Retro "Player 1" Interface:** A meticulously crafted, responsive "OYUNCU 1" component. It features a perfectly centered, pixelated circular avatar utilizing Next.js `<Image />` optimization, wrapped in a retro gaming aesthetic with precise mobile and desktop padding constraints.
+* **Terminal Simulation:** An interactive typewriter effect executing `system_profile.sh` to dynamically render my background data, fully optimized to prevent React hydration errors during mounting.
+* **Orbital Tech Canvas:** Smooth, dynamic Framer Motion animations visualizing my core technology skills. The layout physics, `z-index` layering, and responsive states were mathematically calculated and precisely engineered to avoid layout shifts on mobile devices.
+* **Performance Optimized:** Engineered for zero-lag performance. We utilized strict hydration guards, passive scroll listeners, and GPU-accelerated micro-animations (`will-change-transform`). The development workflow included complete environment resets to ensure seamless execution across Windows browsers.
 
 ## 🚀 Installation & Local Development
 
