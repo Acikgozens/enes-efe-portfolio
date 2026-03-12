@@ -5,6 +5,7 @@ import BackToTop from "@/components/BackToTop";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { LanguageProvider } from "@/components/LanguageProvider";
 import "./globals.css";
 
 const pressStart2P = Press_Start_2P({
@@ -19,14 +20,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://enesefeacikgoz.com"),
+  metadataBase: new URL("https://enes-efe-portfolio.vercel.app/"),
   title: "Enes Efe Açıkgöz | MIS Student & Developer",
-  description: "2nd-year Management Information Systems student focusing on backend architectures and AI trading bots. I know you know that I know you know... and the AI knows it better.",
+  description: "Researching the tech, dreaming of the world. Seeking the truth beyond the code and across the horizons.",
+  alternates: {
+    canonical: "https://enes-efe-portfolio.vercel.app/",
+  },
   keywords: "Enes Efe Açıkgöz, YBS, Management Information Systems, Next.js Portfolio, AI Trading Bots, Software Developer Turkey",
   openGraph: {
     title: "Enes Efe Açıkgöz | MIS Student & Developer",
-    description: "2nd-year Management Information Systems student focusing on backend architectures and AI trading bots. I know you know that I know you know... and the AI knows it better.",
-    url: "https://enesefeacikgoz.com",
+    description: "Researching the tech, dreaming of the world. Seeking the truth beyond the code and across the horizons.",
+    url: "https://enes-efe-portfolio.vercel.app/",
     siteName: "Enes Efe Portfolio",
     images: [
       {
@@ -42,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Enes Efe Açıkgöz | MIS Student & Developer",
-    description: "2nd-year Management Information Systems student focusing on backend architectures and AI trading bots. I know you know that I know you know... and the AI knows it better.",
+    description: "Researching the tech, dreaming of the world. Seeking the truth beyond the code and across the horizons.",
     images: ["/og-image.png"],
   },
   other: {
@@ -59,11 +63,13 @@ export default function RootLayout({
     <html lang="en" translate="no" className="scroll-smooth" suppressHydrationWarning>
       <body className={`${inter.variable} ${pressStart2P.variable} font-sans antialiased text-foreground bg-background`} suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} storageKey="theme" disableTransitionOnChange>
-          <Navbar />
-          <div className="pt-20">
-            {children}
-          </div>
-          <BackToTop />
+          <LanguageProvider>
+            <Navbar />
+            <div className="pt-20">
+              {children}
+            </div>
+            <BackToTop />
+          </LanguageProvider>
           <Analytics />
           <SpeedInsights />
         </ThemeProvider>

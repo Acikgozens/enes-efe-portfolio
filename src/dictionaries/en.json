@@ -1,0 +1,69 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "typewriter": "Researching the tech, dreaming of the world. Seeking the truth beyond the code and across the horizons.",
+    "cta": "Let's Talk"
+  },
+  "about": {
+    "title": "About Me",
+    "terminal": "USER: Enes Efe Açıkgöz\nSTATUS: 2nd Year Management Information Systems Student\nGPA: 3.30 (Projected)\nOS_ENVIRONMENT: Fedora Linux / Windows Dual-Boot\nCORE_SKILLS: Python, Sql, C#\nCURRENT_FOCUS: AI Agents, Games, and Data Science"
+  },
+  "projects": {
+    "sectionTitle": "SELECT YOUR MISSION",
+    "scanning": ">> SCANNING ARCHIVES ...",
+    "systemOnline": "SYSTEM: ONLINE",
+    "items": [
+      {
+        "title": "Python Studying Notebook",
+        "description": "A repository documenting my Python learning journey, covering basics to advanced concepts and algorithms."
+      },
+      {
+        "title": "To-Do Application",
+        "description": "A robust task management tool designed to refine web development skills and command-line efficiency."
+      },
+      {
+        "title": "AI Trading Bot",
+        "description": "Intelligence agent for financial markets, focused on trend analysis and high-frequency data processing."
+      },
+      {
+        "title": "Mobile Game Concept",
+        "description": "Exploration of game mechanics, logic, and immersive character design for mobile platforms."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "nameLbl": "Input Name:",
+    "namePh": "TYPE YOUR NAME...",
+    "emailLbl": "Input Email:",
+    "emailPh": "EMAIL@EXAMPLE.COM",
+    "messageLbl": "Input Message:",
+    "messagePh": "WRITE YOUR MESSAGE HERE...",
+    "send": "Insert Coin & Send",
+    "sending": "SENDING...",
+    "sent": "SENT!",
+    "retry": "RETRY",
+    "successMsg": "MISSION ACCOMPLISHED! MESSAGE SENT.",
+    "errorMsg": "SYSTEM ERROR. PLEASE TRY AGAIN LATER."
+  },
+  "footer": "© 2026 ENES EFE AÇIKGÖZ - [ SYSTEM STATUS: NOMINAL ]",
+  "ui": {
+    "devStatus": "DEVELOPER STATUS: OPTIMAL",
+    "lvl": "LVL 23",
+    "hp": "HP 100%",
+    "player1": "PLAYER 1",
+    "backToTop": "TOP",
+    "viewOnGithub": "VIEW ON GITHUB",
+    "locked": "LOCKED",
+    "statusLabels": {
+      "IN PROGRESS": "IN PROGRESS",
+      "CONCEPT": "CONCEPT",
+      "COMPLETED": "COMPLETED",
+      "PLANNED": "PLANNED"
+    }
+  }
+}

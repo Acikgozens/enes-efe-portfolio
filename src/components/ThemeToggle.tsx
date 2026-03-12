@@ -15,9 +15,12 @@ export function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <button className="p-2 rounded-md bg-white/5 border border-white/10 text-zinc-400 opacity-50 cursor-not-allowed">
-        <Sun className="h-[1.2rem] w-[1.2rem] hidden" />
-        <Moon className="h-[1.2rem] w-[1.2rem] opacity-0" />
+      <button
+        className="flex items-center justify-center w-10 h-10 rounded-md bg-transparent opacity-0"
+        aria-label="Toggle theme"
+        disabled
+      >
+        <Moon className="h-[1.2rem] w-[1.2rem]" />
       </button>
     )
   }

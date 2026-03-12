@@ -3,8 +3,10 @@
 import { useState } from 'react';
 import DOMPurify from 'dompurify';
 import emailjs from '@emailjs/browser';
+import { useLanguage } from './LanguageProvider';
 
 export default function ContactForm() {
+    const { dict } = useLanguage();
     const [loading, setLoading] = useState(false);
     const [status, setStatus] = useState<'IDLE' | 'SUCCESS' | 'ERROR'>('IDLE');
     const [formData, setFormData] = useState({
@@ -58,7 +60,7 @@ export default function ContactForm() {
     return (
         <div className="w-full max-w-2xl mt-12 md:mt-24">
             <h2 className="font-pressStart text-xl md:text-3xl text-accent dark:text-white uppercase border-b-4 border-black dark:border-[#333] pb-4 mb-12 self-start">
-                Get In Touch
+                {dict.contact.title}
             </h2>
 
             <form onSubmit={handleSubmit} className="flex flex-col gap-8">
@@ -75,36 +77,36 @@ export default function ContactForm() {
                 </div>
 
                 <div className="flex flex-col gap-3">
-                    <label className="font-pressStart text-[10px] text-gray-400 uppercase">Input Name:</label>
+                    <label className="font-pressStart text-[10px] text-gray-400 uppercase">{dict.contact.nameLbl}</label>
                     <input
                         type="text"
                         required
                         className="bg-white dark:bg-[#111] border-4 border-gray-200 dark:border-[#333] px-4 py-4 font-sans text-black dark:text-white focus:outline-none focus:border-accent transition-colors"
-                        placeholder="TYPE YOUR NAME..."
+                        placeholder={dict.contact.namePh}
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     />
                 </div>
 
                 <div className="flex flex-col gap-3">
-                    <label className="font-pressStart text-[10px] text-gray-400 uppercase">Input Email:</label>
+                    <label className="font-pressStart text-[10px] text-gray-400 uppercase">{dict.contact.emailLbl}</label>
                     <input
                         type="email"
                         required
                         className="bg-white dark:bg-[#111] border-4 border-gray-200 dark:border-[#333] px-4 py-4 font-sans text-black dark:text-white focus:outline-none focus:border-accent transition-colors"
-                        placeholder="EMAIL@EXAMPLE.COM"
+                        placeholder={dict.contact.emailPh}
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
                 </div>
 
                 <div className="flex flex-col gap-3">
-                    <label className="font-pressStart text-[10px] text-gray-400 uppercase">Input Message:</label>
+                    <label className="font-pressStart text-[10px] text-gray-400 uppercase">{dict.contact.messageLbl}</label>
                     <textarea
                         required
                         rows={5}
                         className="bg-white dark:bg-[#111] border-4 border-gray-200 dark:border-[#333] px-4 py-4 font-sans text-black dark:text-white focus:outline-none focus:border-accent transition-all resize-none"
-                        placeholder="WRITE YOUR MESSAGE HERE..."
+                        placeholder={dict.contact.messagePh}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     />
@@ -121,18 +123,18 @@ export default function ContactForm() {
                         shadow-[6px_6px_0_0_#000] border-2 disabled:opacity-70 disabled:cursor-not-allowed
                         self-center sm:self-start mb-4`}
                 >
-                    {loading ? 'SENDING...' :
-                        status === 'SUCCESS' ? 'SENT!' :
-                            status === 'ERROR' ? 'RETRY' :
-                                'Insert Coin & Send'}
+                    {loading ? dict.contact.sending :
+                        status === 'SUCCESS' ? dict.contact.sent :
+                            status === 'ERROR' ? dict.contact.retry :
+                                dict.contact.send}
                 </button>
 
                 {/* Status Messages */}
                 {status === 'SUCCESS' && (
-                    <p className="font-pressStart text-[8px] text-green-500 animate-pulse">MISSION ACCOMPLISHED! MESSAGE SENT.</p>
+                    <p className="font-pressStart text-[8px] text-green-500 animate-pulse">{dict.contact.successMsg}</p>
                 )}
                 {status === 'ERROR' && (
-                    <p className="font-pressStart text-[8px] text-red-500">SYSTEM ERROR. PLEASE TRY AGAIN LATER.</p>
+                    <p className="font-pressStart text-[8px] text-red-500">{dict.contact.errorMsg}</p>
                 )}
             </form>
         </div>

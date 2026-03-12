@@ -1,0 +1,69 @@
+{
+  "nav": {
+    "about": "Hakkımda",
+    "projects": "Projeler",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "typewriter": "Teknolojiyi araştırıyorum, dünyayı hayal ediyorum. Kodun ötesinde ve ufukların ardında gerçeği arıyorum.",
+    "cta": "İletişime Geç"
+  },
+  "about": {
+    "title": "Hakkımda",
+    "terminal": "KULLANICI: Enes Efe Açıkgöz\nDURUM: 2. Sınıf Yönetim Bilişim Sistemleri Öğrencisi\nNOT ORT.: 3.30 (Tahmini)\nİŞLETİM_SİSTEMİ: Fedora Linux / Windows Çift Önyükleme\nANA_BECERİLER: Python, Sql, C#\nODAK_NOKTASI: Yapay Zeka, Oyunlar ve Veri Bilimi"
+  },
+  "projects": {
+    "sectionTitle": "GÖREVİNİ SEÇ",
+    "scanning": ">> ARŞİVLER TARANYOR ...",
+    "systemOnline": "SİSTEM: ÇEVRIMIÇI",
+    "items": [
+      {
+        "title": "Python Çalışma Defteri",
+        "description": "Temellerden ileri kavramlara ve algoritmalara uzanan Python öğrenme yolculuğumu belgeleyen bir depo."
+      },
+      {
+        "title": "Yapılacaklar Uygulaması",
+        "description": "Web geliştirme becerilerini ve komut satırı verimliliğini iyileştirmek için tasarlanmış sağlam bir görev yönetimi aracı."
+      },
+      {
+        "title": "Yapay Zeka Trading Botu",
+        "description": "Trend analizi ve yüksek frekanslı veri işlemeye odaklanan, finansal piyasalar için bir yapay zeka ajanı."
+      },
+      {
+        "title": "Mobil Oyun Konsepti",
+        "description": "Mobil platformlar için oyun mekaniği, mantığı ve sürükleyici karakter tasarımının keşfi."
+      }
+    ]
+  },
+  "contact": {
+    "title": "İletişime Geç",
+    "nameLbl": "İsim Girin:",
+    "namePh": "İSMİNİZİ YAZIN...",
+    "emailLbl": "E-posta Girin:",
+    "emailPh": "EMAIL@ORNEK.COM",
+    "messageLbl": "Mesaj Girin:",
+    "messagePh": "MESAJINIZI BURAYA YAZIN...",
+    "send": "Jeton At & Gönder",
+    "sending": "GÖNDERİLİYOR...",
+    "sent": "GÖNDERİLDİ!",
+    "retry": "TEKRAR DENE",
+    "successMsg": "GÖREV TAMAMLANDI! MESAJ GÖNDERİLDİ.",
+    "errorMsg": "SİSTEM HATASI. LÜTFEN DAHA SONRA TEKRAR DENEYIN."
+  },
+  "footer": "© 2026 ENES EFE AÇIKGÖZ - [ SİSTEM DURUMU: NOMINAL ]",
+  "ui": {
+    "devStatus": "GELİŞTİRİCİ STATÜSÜ: OPTİMAL",
+    "lvl": "SEVİYE 23",
+    "hp": "CAN 100%",
+    "player1": "OYUNCU 1",
+    "backToTop": "YUKARI",
+    "viewOnGithub": "GİTHUB'DA GÖR",
+    "locked": "KİLİTLİ",
+    "statusLabels": {
+      "IN PROGRESS": "DEVAM EDİYOR",
+      "CONCEPT": "KONSEPT",
+      "COMPLETED": "TAMAMLANDI",
+      "PLANNED": "PLANLANMIŞ"
+    }
+  }
+}

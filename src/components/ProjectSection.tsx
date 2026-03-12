@@ -1,33 +1,31 @@
+"use client";
+
+import { useLanguage } from './LanguageProvider';
 import ProjectCard from './ProjectCard';
 
-const projects = [
+const projectMeta = [
     {
-        title: "Python Studying Notebook",
-        description: "A repository documenting my Python learning journey, covering basics to advanced concepts and algorithms.",
         tags: ["PYTHON", "MD"],
         githubUrl: "https://github.com/Acikgozens/my-Workspace/tree/main/Python_Studying_Notebook",
     },
     {
-        title: "To-Do Application",
-        description: "A robust task management tool designed to refine web development skills and command-line efficiency.",
         tags: ["PYTHON", "WEB"],
         status: "IN PROGRESS",
     },
     {
-        title: "AI Trading Bot",
-        description: "Intelligence agent for financial markets, focused on trend analysis and high-frequency data processing.",
         tags: ["PYTHON", "AI", "FIN"],
         status: "IN PROGRESS",
     },
     {
-        title: "Mobile Game Concept",
-        description: "Exploration of game mechanics, logic, and immersive character design for mobile platforms.",
         tags: ["C#", "UNITY"],
         status: "CONCEPT",
     }
 ];
 
+
 export default function ProjectSection() {
+    const { dict } = useLanguage();
+
     return (
         <section id="projects" className="w-full px-4 md:px-12 py-12 md:py-24 bg-transparent">
             <div className="mx-auto max-w-6xl w-full flex flex-col items-center">
@@ -35,7 +33,11 @@ export default function ProjectSection() {
                 {/* Retro Section Header */}
                 <div className="mb-16 md:mb-24 text-center">
                     <h2 className="font-pressStart text-3xl md:text-5xl leading-loose md:leading-snug text-black dark:text-white uppercase tracking-tighter mb-4">
-                        SELECT <span className="text-accent">YOUR</span> MISSION
+                        {dict.projects.sectionTitle.split(' ').map((word, i) =>
+                            i === 1
+                                ? <span key={i} className="text-accent"> {word} </span>
+                                : <span key={i}>{i === 0 ? word : word}</span>
+                        )}
                     </h2>
                     <div className="w-full flex justify-center gap-2 mt-6">
                         <div className="w-12 h-1 bg-accent"></div>
@@ -46,23 +48,23 @@ export default function ProjectSection() {
 
                 {/* Responsive Grid: 1 col on mobile, 2 col on md/lg */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl overflow-visible">
-                    {projects.map((project, idx) => (
+                    {dict.projects.items.map((item, idx) => (
                         <ProjectCard
                             key={idx}
                             index={idx}
-                            title={project.title}
-                            description={project.description}
-                            tags={project.tags}
-                            githubUrl={project.githubUrl}
-                            status={project.status}
+                            title={item.title}
+                            description={item.description}
+                            tags={projectMeta[idx]?.tags ?? []}
+                            githubUrl={projectMeta[idx]?.githubUrl}
+                            status={projectMeta[idx]?.status}
                         />
                     ))}
                 </div>
 
                 {/* Bottom Footer for Section */}
                 <div className="mt-16 font-pressStart text-[10px] text-gray-500 uppercase flex gap-4 animate-pulse">
-                    <span>{">>"} SCANNING ARCHIVES ...</span>
-                    <span className="hidden md:inline">SYSTEM: ONLINE</span>
+                    <span>{dict.projects.scanning}</span>
+                    <span className="hidden md:inline">{dict.projects.systemOnline}</span>
                 </div>
             </div>
         </section>

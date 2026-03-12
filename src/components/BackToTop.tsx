@@ -3,9 +3,11 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronUp } from 'lucide-react';
+import { useLanguage } from './LanguageProvider';
 
 export default function BackToTop() {
     const [isVisible, setIsVisible] = useState(false);
+    const { dict, mounted } = useLanguage();
 
     useEffect(() => {
         const toggleVisibility = () => {
@@ -50,9 +52,9 @@ export default function BackToTop() {
                         {/* Pixel Art Style Arrow */}
                         <div className="flex flex-col items-center">
                             <ChevronUp className="w-6 h-6 md:w-8 md:h-8 text-black" strokeWidth={3} />
-                            {/* Optional tiny text for retro feel */}
-                            <span className="font-pressStart text-[6px] md:text-[8px] text-black mt-1 leading-none">
-                                TOP
+                            {/* Label: fixed min-width so YUKARI never shifts the button size */}
+                            <span className="font-pressStart text-[6px] md:text-[8px] text-black mt-1 leading-none min-w-[30px] text-center">
+                                {mounted ? dict.ui.backToTop : 'TOP'}
                             </span>
                         </div>
                     </button>

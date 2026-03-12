@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Github } from 'lucide-react';
+import { useLanguage } from './LanguageProvider';
 
 interface ProjectCardProps {
     title: string;
@@ -13,6 +14,12 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ title, description, tags, githubUrl, status, index = 0 }: ProjectCardProps) {
+    const { dict } = useLanguage();
+
+    // Translate the raw status key → localized label. Falls back to raw value if key not found.
+    const statusLabels = dict.ui.statusLabels as Record<string, string>;
+    const statusLabel = status ? (statusLabels[status] ?? status) : undefined;
+
     return (
         <motion.div
             whileHover={{ scale: 1.02, zIndex: 40 }}
@@ -26,7 +33,7 @@ export default function ProjectCard({ title, description, tags, githubUrl, statu
                 </h3>
                 {status && (
                     <div className="bg-accent text-black font-pressStart text-[10px] md:text-xs px-2 py-1 border-2 border-black shadow-lg shrink-0">
-                        {status}
+                        {statusLabel}
                     </div>
                 )}
             </div>
@@ -55,12 +62,12 @@ export default function ProjectCard({ title, description, tags, githubUrl, statu
                         className="flex items-center gap-2 font-pressStart text-[9px] text-accent hover:text-white transition-colors"
                     >
                         <Github size={14} />
-                        VIEW ON GITHUB
+                        {dict.ui.viewOnGithub}
                     </a>
                 )}
                 {!githubUrl && status === 'IN PROGRESS' && (
                     <span className="flex items-center gap-2 font-pressStart text-[9px] text-gray-500 cursor-not-allowed">
-                        LOCKED
+                        {dict.ui.locked}
                     </span>
                 )}
             </div>
